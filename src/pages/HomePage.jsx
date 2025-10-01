@@ -9,12 +9,10 @@ import ImageCarousel from '../components/UI/ImageCarousel';
 import SaleLoop from '../components/UI/SaleLoop';
 import CategoryTiles from '../components/UI/CategoryTiles';
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = ({ onNavigate, onViewProduct, products }) => {
   useEffect(() => {
-    // Only run GSAP animations if elements exist
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
       gsap.fromTo('.hero-title', 
