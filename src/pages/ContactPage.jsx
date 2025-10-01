@@ -31,13 +31,11 @@ const ContactPage = ({ onNavigate }) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
     setIsSubmitted(true);
     
-    // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({ name: '', email: '', subject: '', message: '' });
@@ -92,7 +90,6 @@ const ContactPage = ({ onNavigate }) => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-black/5 rounded-full blur-3xl"></div>
@@ -129,11 +126,9 @@ const ContactPage = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Contact Info & Form */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -170,7 +165,6 @@ const ContactPage = ({ onNavigate }) => {
               </div>
             </motion.div>
 
-            {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -278,7 +272,6 @@ const ContactPage = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -317,7 +310,6 @@ const ContactPage = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
