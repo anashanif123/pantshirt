@@ -180,7 +180,7 @@ const Footer = () => {
                   className="mb-6"
                 >
                   <h3 className="text-3xl font-bold mb-2 text-white">
-                    8ire Store
+                    stylehub
                   </h3>
                   <div className="w-16 h-1 bg-white rounded-full"></div>
                 </motion.div>
