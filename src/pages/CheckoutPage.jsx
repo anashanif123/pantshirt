@@ -64,7 +64,6 @@ const CheckoutPage = ({ onNavigate }) => {
     e.preventDefault();
     setIsProcessing(true);
     
-    // Simulate payment processing
     await new Promise(resolve => setTimeout(resolve, 3000));
     
     setIsProcessing(false);
@@ -117,7 +116,6 @@ const CheckoutPage = ({ onNavigate }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
         <div className="mb-8">
           <motion.button
             onClick={() => onNavigate('cart')}
@@ -130,7 +128,6 @@ const CheckoutPage = ({ onNavigate }) => {
           <h1 className="text-3xl font-bold text-gray-900">Checkout</h1>
         </div>
 
-        {/* Progress Steps */}
         <div className="mb-8">
           <div className="flex items-center justify-between">
             {steps.map((step, index) => (
@@ -167,10 +164,8 @@ const CheckoutPage = ({ onNavigate }) => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Checkout Form */}
           <div className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="space-y-8">
-              {/* Step 1: Shipping Information */}
               {currentStep === 1 && (
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -294,7 +289,6 @@ const CheckoutPage = ({ onNavigate }) => {
                 </motion.div>
               )}
 
-              {/* Step 2: Payment Information */}
               {currentStep === 2 && (
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -375,7 +369,6 @@ const CheckoutPage = ({ onNavigate }) => {
                 </motion.div>
               )}
 
-              {/* Step 3: Review Order */}
               {currentStep === 3 && (
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -385,7 +378,6 @@ const CheckoutPage = ({ onNavigate }) => {
                   <h2 className="text-xl font-semibold text-gray-900 mb-6">Review Your Order</h2>
                   
                   <div className="space-y-6">
-                    {/* Shipping Address */}
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">Shipping Address</h3>
                       <p className="text-gray-600">
@@ -395,7 +387,6 @@ const CheckoutPage = ({ onNavigate }) => {
                       </p>
                     </div>
 
-                    {/* Payment Method */}
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">Payment Method</h3>
                       <p className="text-gray-600">
@@ -404,7 +395,6 @@ const CheckoutPage = ({ onNavigate }) => {
                       </p>
                     </div>
 
-                    {/* Order Items */}
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-4">Order Items</h3>
                       <div className="space-y-3">
@@ -434,7 +424,6 @@ const CheckoutPage = ({ onNavigate }) => {
                 </motion.div>
               )}
 
-              {/* Navigation Buttons */}
               <div className="flex justify-between">
                 <motion.button
                   type="button"
@@ -480,7 +469,6 @@ const CheckoutPage = ({ onNavigate }) => {
             </form>
           </div>
 
-          {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl shadow-sm p-6 sticky top-24">
               <h2 className="text-lg font-semibold text-gray-900 mb-6">Order Summary</h2>
@@ -511,7 +499,6 @@ const CheckoutPage = ({ onNavigate }) => {
                 </div>
               </div>
 
-              {/* Security Features */}
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <ShieldCheckIcon className="w-4 h-4" />
