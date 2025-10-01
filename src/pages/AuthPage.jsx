@@ -18,10 +18,8 @@ const AuthPage = ({ onClose, initialMode = 'login' }) => {
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-50 overflow-y-auto"
     >
-      {/* Backdrop */}
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
       
-      {/* Modal */}
       <div className="flex min-h-full items-center justify-center p-4">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
@@ -29,7 +27,6 @@ const AuthPage = ({ onClose, initialMode = 'login' }) => {
           exit={{ scale: 0.9, opacity: 0 }}
           className="relative w-full max-w-md"
         >
-          {/* Close Button */}
           <button
             onClick={onClose}
             className="absolute -top-4 -right-4 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors"
@@ -37,7 +34,6 @@ const AuthPage = ({ onClose, initialMode = 'login' }) => {
             <XMarkIcon className="h-6 w-6 text-gray-600" />
           </button>
 
-          {/* Auth Forms */}
           <AnimatePresence mode="wait">
             {mode === 'login' ? (
               <LoginForm
